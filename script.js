@@ -22,15 +22,17 @@ function onMyFuncClick() {
 //   }
 // }
 
-function onRandomClick(max) {
-    max = parseInt(max);
-    if (isNaN(max) || max < 1) return 0;
-    return Math.floor(Math.random() * max) + 1;
+function onRandomClick(maxRand) {
+    maxRand = parseInt(maxRand);
+    if (maxRand > 1) {
+          return Math.floor(Math.random() * maxRand) + 1;
+    }
+    else return 0;
 }
 
-for (let i = 0; i < 5; i++) {
-    console.log("Random 1-10:", getRandomNum(10));
-}
+// for (let i = 0; i < 5; i++) {
+//     console.log("Random 1-10:", getRandomNum(10));
+// }
 
 // 3) myAdder(x, y): numeric sum
 
