@@ -6,13 +6,15 @@
 let count = 0;
 
 function onMyFuncClick() {
-    count++;
-    return count;
+  count++;
+  return count;
 }
 
-
-
 // 2) getRandomNum(max): 1..max int or 0 if invalid
+
+function onRandomClick(maxRand) {
+  return Math.random (1, maxRand);
+}
 
 // 3) myAdder(x, y): numeric sum
 
