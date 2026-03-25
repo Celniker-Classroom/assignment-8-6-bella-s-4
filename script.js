@@ -23,9 +23,9 @@ function onMyFuncClick() {
 // }
 
 function onRandomClick(max) {
-    maxRand = parseInt(max);
-    if (maxRand > 1) {
-          return Math.floor(Math.random() * max) + 1;
+    max = parseInt(max);
+    if (max > 1) {
+      return Math.floor(Math.random() * max) + 1;
     }
     else return 0;
 }
@@ -36,10 +36,35 @@ function onRandomClick(max) {
 
 // 3) myAdder(x, y): numeric sum
 
+function myAdder(x,y) {
+  x=parseInt(x);
+  y=parseInt(y);
+  ADD = x + y;
+  return ADD; 
+}
+
 // 4) distance(x1, y1, x2, y2): Euclidean distance
+
+function distance(x1, y1, x2, y2) {
+    return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+}
 
 // 5) quadratic(a, b, c): roots of ax^2 + bx + c = 0
 
+function quadratic(a, b, c) {
+    let disc = b * b - 4 * a * c;
+    if (disc > 0) {
+        let r1 = (-b + Math.sqrt(disc)) / (2 * a);
+        let r2 = (-b - Math.sqrt(disc)) / (2 * a);
+        return [r1, r2];
+    } else if (disc === 0) {
+        return [-b / (2 * a)];
+    } else {
+        let real = (-b / (2 * a));
+        let imag = (Math.sqrt(-disc) / (2 * a));
+        return [real + "+" + imag + "i", real + "-" + imag + "i"];
+    }
+}
 
 // ----- Helpers -----
 function $(id) { return document.getElementById(id); }
