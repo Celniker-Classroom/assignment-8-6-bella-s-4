@@ -13,7 +13,12 @@ function onMyFuncClick() {
 // 2) getRandomNum(max): 1..max int or 0 if invalid
 
 function onRandomClick(maxRand) {
-  return Math.random (1, maxRand);
+  if (maxRand > 0) {
+    return Math.random (1, maxRand);
+  } 
+  else () => {
+    return 0;
+  }
 }
 
 // 3) myAdder(x, y): numeric sum
