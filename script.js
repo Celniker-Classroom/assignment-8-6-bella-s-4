@@ -2,6 +2,16 @@
 
 // 1) myFunc(): persistent counter
 
+// practice.js — counter pattern
+let count = 0;
+
+function onMyFuncClick() {
+    count++;
+    return count;
+}
+
+
+
 // 2) getRandomNum(max): 1..max int or 0 if invalid
 
 // 3) myAdder(x, y): numeric sum
