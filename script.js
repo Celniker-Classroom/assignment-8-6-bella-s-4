@@ -22,10 +22,10 @@ function onMyFuncClick() {
 //   }
 // }
 
-function onRandomClick(maxRand) {
-    maxRand = parseInt(maxRand);
+function onRandomClick(max) {
+    maxRand = parseInt(max);
     if (maxRand > 1) {
-          return Math.floor(Math.random() * maxRand) + 1;
+          return Math.floor(Math.random() * max) + 1;
     }
     else return 0;
 }
