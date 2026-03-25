@@ -12,13 +12,24 @@ function onMyFuncClick() {
 
 // 2) getRandomNum(max): 1..max int or 0 if invalid
 
-function onRandomClick(maxRand) {
-  if (maxRand > 0) {
-    return Math.random (1, maxRand);
-  } 
-  else () => {
-    return 0;
-  }
+// function onRandomClick(min, maxRand) {
+//   var min = 1;
+//   if (maxRand > 0) {
+//     return Math.random ();
+//   } 
+//   else () => {
+//     return 0;
+//   }
+// }
+
+function onRandomClick(max) {
+    max = parseInt(max);
+    if (isNaN(max) || max < 1) return 0;
+    return Math.floor(Math.random() * max) + 1;
+}
+
+for (let i = 0; i < 5; i++) {
+    console.log("Random 1-10:", getRandomNum(10));
 }
 
 // 3) myAdder(x, y): numeric sum
