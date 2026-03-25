@@ -22,12 +22,10 @@ function onMyFuncClick() {
 //   }
 // }
 
-function onRandomClick(max) {
+function getRandomNum(max) {
     max = parseInt(max);
-    if (max > 1) {
-      return Math.floor(Math.random() * max) + 1;
-    }
-    else return 0;
+    if (isNaN(max) || max < 1) return 0;
+    return Math.floor(Math.random() * max) + 1;
 }
 
 // for (let i = 0; i < 5; i++) {
